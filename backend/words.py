@@ -1,5 +1,6 @@
 import random
 
+
 def generate_key(word_list: list, words: int):
     """
     (method) generate_key
@@ -17,6 +18,7 @@ def generate_key(word_list: list, words: int):
     ```
     """
     return " ".join(random.choices(word_list, k=words))
+
 
 def get_words(file: str):
     """

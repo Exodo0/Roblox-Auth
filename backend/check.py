@@ -1,16 +1,21 @@
-import aiohttp, asyncio, json, nest_asyncio
+import aiohttp
+import asyncio
+import json
+import nest_asyncio
 
 nest_asyncio.apply()
+
 
 async def c(i: int):
     async with aiohttp.ClientSession() as session:
         async with session.request("GET", f"https://users.roblox.com/v1/users/{i}") as res:
             return await res.content.read(), res.status
 
+
 class user:
     def __init__(self, userId: int):
         self.i = userId
-        
+
     def desc(self):
         """
         (method) desc
@@ -22,7 +27,7 @@ class user:
             return json.loads(res[0].decode("utf-8"))["description"]
         except KeyError:
             raise KeyError("Could not grab description.")
-        
+
     def exists(self):
         """
         (method) exists

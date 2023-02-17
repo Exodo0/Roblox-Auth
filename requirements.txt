@@ -1,0 +1,4 @@
+discord
+nest_asyncio
+rich
+requests

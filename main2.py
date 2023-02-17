@@ -20,7 +20,7 @@ COOLDOWN = 10
 con = Console()
 con.clear()
 # Setup Bot
-with con.status("[bold green] Bot Funcionando... [bold green]"):
+with con.status("[bold green] Bot Funcionando..."):
     word_list = words.get_words(WORD_FILE)
     roauth = commands.Bot(command_prefix=BOT_PREFIX,
                           intents=discord.Intents.all())
