@@ -9,3 +9,5 @@ crayon
 orange
 yellow
 green
+gato
+perro
