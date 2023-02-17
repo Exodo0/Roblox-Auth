@@ -46,8 +46,11 @@ with con.status("[bold green] Bot Funcionando... [bold green]"):
         u = check.user(userId)
         skey = words.generate_key(word_list, KEY_COUNT)
         if u.exists() == True:
+
             embed2 = discord.Embed(
+                # Se agrega el thumbnail con la imagen de perfil de roblox del usuario
                 title="Bienvenido a tu verificacion", description=f"**Esta es tu llave Ingresala en tu perfil de roblox:** \n\n↪ **{skey}** ↩ \n\nVerificando usuario: {u.username()}", color=0x00ff00)
+
             await ctx.send(f"{ctx.author.mention}", embed=embed2)
             for _ in range(CHECKS):
                 if u.compare(skey) == True:
