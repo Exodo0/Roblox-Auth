@@ -23,7 +23,7 @@ con.clear()
 with con.status("[bold green] Bot Funcionando... [bold green]"):
     word_list = words.get_words(WORD_FILE)
     roauth = commands.Bot(command_prefix=BOT_PREFIX,
-                          intents=discord.Intents.all())
+                          intents=discord.Intents.all(), help_command=None, description="Bot de verificacion de roblox")
 
     @roauth.event
     async def on_ready():
